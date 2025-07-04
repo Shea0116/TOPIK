@@ -11,6 +11,11 @@ html, body {
   background-color: #f9fafb;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 :root {
   --primary-color: #007bff;
   --secondary-color: #6c757d;
