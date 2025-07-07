@@ -1,0 +1,32 @@
+//* Font family
+//? font-family: 'Charmonman', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
+//? font-family: "Nanum Pen Script", cursive;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+//? font-family: "Noto Serif KR", serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+
+
+html, body {
+  background-color: var(--bodybgc);
+}
+
+:root {
+  --bgc: #ffffff;
+  --txtc: rgba(31, 41, 55, 1);
+  --fw: normal;
+  --bodybgc: rgb(249, 250, 251);
+  --activeColor: rgba(29, 78, 216, 1);
+  --githublogo: #fff;
+  --border: #ccc solid 1px;
+}
+
+[data-theme='dark'] {
+  --bgc: rgba(31, 41, 55, 1);
+  --txtc: rgba(255, 255, 255, 0.85);
+  --fw: lighter;
+  --bodybgc: rgba(17, 24, 39, 1);
+  --activeColor: rgba(59, 130, 246, 1);
+   --githublogo: rgba(156, 163, 175, 1);
+   --border: #666 solid 1px;
+}

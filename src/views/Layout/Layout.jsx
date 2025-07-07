@@ -2,20 +2,17 @@ import './Layout.scss'
 import Header from "./components/Header"
 import Main from "./components/Main"
 import Footer from "./components/Footer"
-import { Outlet } from 'react-router-dom'
-import { useState } from 'react';
+import { useSelector} from 'react-redux';
 
 const Layout = () => {
-    const [isDark, setIsDark] = useState(false);
+    // const [isDark, setIsDark] = useState(false);
+    const { isDark } = useSelector(state => state.isDark)
 
-    const toggleTheme = () => {
-        setIsDark(!isDark);
-    };
     return (
         <>
             <div id='Layout' data-theme={isDark ? 'dark' : 'light'}>
-                <Header isDark={isDark} toggleTheme={toggleTheme} />
-                <Main><Outlet /></Main>
+                <Header />
+                <Main></Main>
                 <Footer />
             </div>
         </>

@@ -1,25 +1,8 @@
-:root {
-  --bgc: #ffffff;
-  --txtc: rgba(31, 41, 55, 1);
-  --fw: normal;
-  --bodybgc: rgb(249, 250, 251);
-  --activeColor: rgba(29, 78, 216, 1);
-}
-
-[data-theme='dark'] {
-  --bgc: rgba(31, 41, 55, 1);
-  --txtc: rgba(255, 255, 255, 0.85);
-  --fw: lighter;
-  --bodybgc: rgba(17, 24, 39, 1);
-  --activeColor: rgba(59, 130, 246, 1);
-}
-
 
 #Layout {
   padding: 20px;
   background-color: var(--bodybgc);
   color: var(--txtc);
-  height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 

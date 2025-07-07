@@ -1,13 +1,19 @@
 import './styles/Header.scss'
-import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import { changeDark } from '../../../store/modules/isDark'
 
-const Header = ({ isDark, toggleTheme }) => {
+const Header = () => {
   const { logo } = useSelector(state => state.logo)
+  const isDark = useSelector(state => state.isDark.isDark) 
+  const dispatch = useDispatch()
+  const toggleTheme = () => {
+    dispatch(changeDark())
+  };
 
   return (
     <div id="Header">
-      <img src={ logo } alt="logo" />
+      <img src={logo} alt="logo" />
 
       <nav>
         <NavLink to="/" ><i className='iconfont icon-home'></i>首页</NavLink>
@@ -20,6 +26,7 @@ const Header = ({ isDark, toggleTheme }) => {
       </nav>
 
       <div className='btns'>
+        <a className='GithubUrl' href="https://github.com/Shea0116/TOPIK" target='blank'></a>
         <button onClick={toggleTheme}>
           {isDark ? '☀' : '🌙'}
         </button>
